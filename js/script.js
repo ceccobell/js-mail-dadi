@@ -24,9 +24,8 @@ search_btn.addEventListener("click", function () {
     }
   }
   if (found_email == true) {
-    console.log("Complimenti! La tua email ti garantisce l'accesso");
+    document.getElementById("message").innerText = "Complimenti! La tua email ti garantisce l'accesso!"
   } else {
-    console.log("Ci dispiace ma la tua email non ti garantisce l'accesso");
+    document.getElementById("message").innerText = "Ci dispiace ma la tua email non ti garantisce l'accesso!"
   }
-  console.log(found_email);
 });
