@@ -37,15 +37,16 @@ const play_btn = document.getElementById("play");
 
 play_btn.addEventListener("click", function() {
     let user_num = Math.floor(Math.random() * 6) + 1;
-    console.log(user_num);
     let computer_num = Math.floor(Math.random() * 6) +1;
-    console.log(computer_num);
+
+    document.getElementById("user_num").innerText = "Hai lanciato il dado ed è uscito: " + user_num
+    document.getElementById("computer_num").innerText = "Il computer ha lanciato il dado ed è uscito: " + computer_num
 
     if (user_num > computer_num) {
-        console.log("Hai vinto contro il computer");
+        document.getElementById("who-win").innerText = "Hai vinto contro il computer" 
     } else if (user_num < computer_num) {
-        console.log("Hai perso contro il computer")
+        document.getElementById("who-win").innerText = "Hai perso contro il computer"
     } else {
-        console.log("HAi pareggiato")
+        document.getElementById("who-win").innerText = "Avete pareggiato"
     }
 })
