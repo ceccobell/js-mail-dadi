@@ -75,58 +75,59 @@ user_dado.addEventListener("click", function() {
        }
        
        document.getElementById("user_num").innerText = "Hai lanciato il dado ed è uscito: " + user_num
+       
+       // tolgo shaking al dado dell'utente
+       user_dado.classList.remove('rolling');
+       setTimeout(function(){
+           computer_dado.classList.add('rolling');
 
+       }, 1000)
+       
+       let computer_num = Math.floor(Math.random() * 6) + 1;
+       
+       setTimeout(function(){
+           if (computer_num == 1) {
+               pallini[10].style.display = 'block';
+           } else if (computer_num == 2) {
+               pallini[7].style.display = 'block';
+               pallini[13].style.display = 'block';
+           } else if (computer_num == 3) {
+               pallini[8].style.display = 'block';
+               pallini[10].style.display = 'block';
+               pallini[12].style.display = 'block';
+           } else if (computer_num == 4) {
+               pallini[7].style.display = 'block';
+               pallini[8].style.display = 'block';
+               pallini[12].style.display = 'block';
+               pallini[13].style.display = 'block';
+           } else if (computer_num == 5) {
+               pallini[7].style.display = 'block';
+               pallini[8].style.display = 'block';
+               pallini[10].style.display = 'block';
+               pallini[12].style.display = 'block';
+               pallini[13].style.display = 'block';
+           } else if (computer_num == 6) {
+               pallini[7].style.display = 'block';
+               pallini[8].style.display = 'block';
+               pallini[9].style.display = 'block';
+               pallini[11].style.display = 'block';
+               pallini[12].style.display = 'block';
+               pallini[13].style.display = 'block';
+           }
+   
+           document.getElementById("computer_num").innerText = "Il computer ha lanciato il dado ed è uscito: " + computer_num
+   
+           if (user_num > computer_num) {
+               document.getElementById("who-win").innerText = "Hai vinto contro il computer" 
+           } else if (user_num < computer_num) {
+               document.getElementById("who-win").innerText = "Hai perso contro il computer"
+           } else {
+               document.getElementById("who-win").innerText = "Avete pareggiato"
+           }
+           computer_dado.classList.remove('rolling');
+       }, 2000)
     }, 2000)
 
-    computer_dado.addEventListener("click", function(){
-        computer_dado.classList.add('rolling');
-        // tolgo shaking al dado dell'utente
-        user_dado.classList.remove('rolling');
     
-        let computer_num = Math.floor(Math.random() * 6) + 1;
-        
-        setTimeout(function(){
-            if (computer_num == 1) {
-                pallini[10].style.display = 'block';
-            } else if (computer_num == 2) {
-                pallini[7].style.display = 'block';
-                pallini[13].style.display = 'block';
-            } else if (computer_num == 3) {
-                pallini[8].style.display = 'block';
-                pallini[10].style.display = 'block';
-                pallini[12].style.display = 'block';
-            } else if (computer_num == 4) {
-                pallini[7].style.display = 'block';
-                pallini[8].style.display = 'block';
-                pallini[12].style.display = 'block';
-                pallini[13].style.display = 'block';
-            } else if (computer_num == 5) {
-                pallini[7].style.display = 'block';
-                pallini[8].style.display = 'block';
-                pallini[10].style.display = 'block';
-                pallini[12].style.display = 'block';
-                pallini[13].style.display = 'block';
-            } else if (computer_num == 6) {
-                pallini[7].style.display = 'block';
-                pallini[8].style.display = 'block';
-                pallini[9].style.display = 'block';
-                pallini[11].style.display = 'block';
-                pallini[12].style.display = 'block';
-                pallini[13].style.display = 'block';
-            }
-    
-            document.getElementById("computer_num").innerText = "Il computer ha lanciato il dado ed è uscito: " + computer_num
-    
-            if (user_num > computer_num) {
-                document.getElementById("who-win").innerText = "Hai vinto contro il computer" 
-            } else if (user_num < computer_num) {
-                document.getElementById("who-win").innerText = "Hai perso contro il computer"
-            } else {
-                document.getElementById("who-win").innerText = "Avete pareggiato"
-            }
-            computer_dado.classList.remove('rolling');
-        }, 2000)
     })
 
-
-})
