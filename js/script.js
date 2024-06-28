@@ -10,3 +10,8 @@ const list_email = [
   "laura.galli@example.com",
   "andrea.moro@example.com",
 ];
+
+const search_btn = document.getElementById("search");
+search_btn.addEventListener("click", function () {
+    let email = document.getElementById("email").value
+}
