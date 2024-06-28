@@ -40,4 +40,12 @@ play_btn.addEventListener("click", function() {
     console.log(user_num);
     let computer_num = Math.floor(Math.random() * 6) +1;
     console.log(computer_num);
+
+    if (user_num > computer_num) {
+        console.log("Hai vinto contro il computer");
+    } else if (user_num < computer_num) {
+        console.log("Hai perso contro il computer")
+    } else {
+        console.log("HAi pareggiato")
+    }
 })
