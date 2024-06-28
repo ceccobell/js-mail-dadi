@@ -12,6 +12,16 @@ const list_email = [
 ];
 
 const search_btn = document.getElementById("search");
+
 search_btn.addEventListener("click", function () {
-    let email = document.getElementById("email").value
-}
+  let email = document.getElementById("email").value;
+
+  let found_email = false;
+
+  for (let i = 0; i < list_email.length; i++) {
+    if (list_email[i] == email) {
+      found_email = true;
+    }
+  }
+  console.log(found_email);
+});
