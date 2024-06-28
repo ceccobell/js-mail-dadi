@@ -43,7 +43,6 @@ user_dado.addEventListener("click", function() {
     // animazione dello shaking
     user_dado.classList.add('rolling');
     let user_num = Math.floor(Math.random() * 6) + 1;
-    let computer_num = Math.floor(Math.random() * 6) + 1;
 
      if (user_num == 1) {
         pallini[3].style.display = 'block';
@@ -83,5 +82,40 @@ user_dado.addEventListener("click", function() {
         document.getElementById("who-win").innerText = "Hai perso contro il computer"
     } else {
         document.getElementById("who-win").innerText = "Avete pareggiato"
+    }
+})
+
+computer_dado.addEventListener("click", function(){
+    computer_dado.classList.add('rolling');
+
+    let computer_num = Math.floor(Math.random() * 6) + 1;
+
+     if (computer_num == 1) {
+        pallini[10].style.display = 'block';
+    } else if (computer_num == 2) {
+        pallini[7].style.display = 'block';
+        pallini[13].style.display = 'block';
+    } else if (computer_num == 3) {
+        pallini[8].style.display = 'block';
+        pallini[10].style.display = 'block';
+        pallini[12].style.display = 'block';
+    } else if (computer_num == 4) {
+        pallini[7].style.display = 'block';
+        pallini[8].style.display = 'block';
+        pallini[12].style.display = 'block';
+        pallini[13].style.display = 'block';
+    } else if (computer_num == 5) {
+        pallini[7].style.display = 'block';
+        pallini[8].style.display = 'block';
+        pallini[10].style.display = 'block';
+        pallini[12].style.display = 'block';
+        pallini[13].style.display = 'block';
+    } else if (computer_num == 6) {
+        pallini[7].style.display = 'block';
+        pallini[8].style.display = 'block';
+        pallini[9].style.display = 'block';
+        pallini[11].style.display = 'block';
+        pallini[12].style.display = 'block';
+        pallini[13].style.display = 'block';
     }
 })
