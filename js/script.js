@@ -14,7 +14,7 @@ const list_email = [
 const search_btn = document.getElementById("search");
 
 search_btn.addEventListener("click", function () {
-  let email = document.getElementById("email").value;
+  let email = document.getElementById("email").value.toLowerCase();
 
   let found_email = false;
 
