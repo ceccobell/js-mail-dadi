@@ -35,11 +35,44 @@ search_btn.addEventListener("click", function () {
 
 // gestisci il gioco dei dadi così: mostra a schermo due dadi, sx utente, dx pc, al click di un dado rolla quel dado e blocca il roll finchè anche l’altro non viene cliccato e rollato.
 
-const play_btn = document.getElementById("play");
+const computer_dado = document.getElementById("computer_dado");
+const user_dado = document.getElementById("user_dado");
+const pallini = document.querySelectorAll('.pallino');
 
-play_btn.addEventListener("click", function() {
+user_dado.addEventListener("click", function() {
+    // animazione dello shaking
+    user_dado.classList.add('rolling');
     let user_num = Math.floor(Math.random() * 6) + 1;
-    let computer_num = Math.floor(Math.random() * 6) +1;
+    let computer_num = Math.floor(Math.random() * 6) + 1;
+
+     if (user_num == 1) {
+        pallini[3].style.display = 'block';
+    } else if (user_num == 2) {
+        pallini[0].style.display = 'block';
+        pallini[6].style.display = 'block';
+    } else if (user_num == 3) {
+        pallini[1].style.display = 'block';
+        pallini[3].style.display = 'block';
+        pallini[5].style.display = 'block';
+    } else if (user_num == 4) {
+        pallini[0].style.display = 'block';
+        pallini[1].style.display = 'block';
+        pallini[5].style.display = 'block';
+        pallini[6].style.display = 'block';
+    } else if (user_num == 5) {
+        pallini[0].style.display = 'block';
+        pallini[1].style.display = 'block';
+        pallini[3].style.display = 'block';
+        pallini[5].style.display = 'block';
+        pallini[6].style.display = 'block';
+    } else if (user_num == 6) {
+        pallini[0].style.display = 'block';
+        pallini[1].style.display = 'block';
+        pallini[2].style.display = 'block';
+        pallini[4].style.display = 'block';
+        pallini[5].style.display = 'block';
+        pallini[6].style.display = 'block';
+    }
 
     document.getElementById("user_num").innerText = "Hai lanciato il dado ed è uscito: " + user_num
     document.getElementById("computer_num").innerText = "Il computer ha lanciato il dado ed è uscito: " + computer_num
