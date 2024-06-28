@@ -6,6 +6,11 @@
     position: relative;
 }
 
+.dado:hover {
+    background-color: rgba(245, 222, 179, 0.705);
+    cursor: pointer;
+}
+
 .pallino {
     width: 20px;
     height: 20px;

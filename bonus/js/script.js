@@ -76,7 +76,7 @@ user_dado.addEventListener("click", function() {
        
        document.getElementById("user_num").innerText = "Hai lanciato il dado ed è uscito: " + user_num
 
-    }, 4000)
+    }, 2000)
 
     computer_dado.addEventListener("click", function(){
         computer_dado.classList.add('rolling');
@@ -125,7 +125,7 @@ user_dado.addEventListener("click", function() {
                 document.getElementById("who-win").innerText = "Avete pareggiato"
             }
             computer_dado.classList.remove('rolling');
-        }, 4000)
+        }, 2000)
     })
 
 
