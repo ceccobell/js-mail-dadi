@@ -29,3 +29,15 @@ search_btn.addEventListener("click", function () {
     document.getElementById("message").innerText = "Ci dispiace ma la tua email non ti garantisce l'accesso!"
   }
 });
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+const play_btn = document.getElementById("play");
+
+play_btn.addEventListener("click", function() {
+    let user_num = Math.floor(Math.random() * 6) + 1;
+    console.log(user_num);
+    let computer_num = Math.floor(Math.random() * 6) +1;
+    console.log(computer_num);
+})
