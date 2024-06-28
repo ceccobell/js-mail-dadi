@@ -1,0 +1,53 @@
+.dado {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: wheat;
+    position: relative;
+}
+
+.pallino {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+}
+
+.pallino1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pallino2 {
+    top: 10%;
+    left: 15%;
+}
+
+.pallino3 {
+    top: 10%;
+    right: 15%;
+}
+
+.pallino4 {
+    top: 50%;
+    left: 15%;
+    transform: translate(0%, -50%);
+}
+
+.pallino5 {
+    bottom: 10%;
+    left: 15%;
+}
+
+.pallino6 {
+    bottom: 10%;
+    right: 15%;
+}
+
+.pallino7 {
+    top: 50%;
+    right: 15%;
+    transform: translate(0%, -50%);
+}

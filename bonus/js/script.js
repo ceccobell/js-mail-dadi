@@ -33,6 +33,8 @@ search_btn.addEventListener("click", function () {
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
+// gestisci il gioco dei dadi così: mostra a schermo due dadi, sx utente, dx pc, al click di un dado rolla quel dado e blocca il roll finchè anche l’altro non viene cliccato e rollato.
+
 const play_btn = document.getElementById("play");
 
 play_btn.addEventListener("click", function() {
